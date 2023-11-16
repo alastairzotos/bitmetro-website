@@ -44,9 +44,9 @@ export default function IndexPage() {
 					</Link>
 				</section>
 
-				<section className="text-center justify-center mt-8 w-full">
+				<section className="text-center justify-center mt-12 w-full">
 					<h4 className={title({ color: 'green' })}>About</h4>
-					<div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full mt-8">
+					<div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full mt-12">
 						<div className="col-span-6 md:col-span-1 flex justify-center">
 							<Avatar src={meConfig.image.src} className="w-20 h-20 text-large" />
 						</div>
@@ -69,7 +69,7 @@ export default function IndexPage() {
 
 				<section className="inline-block text-center justify-center mt-8">
 					<h4 className={title({ color: 'green' })}>Projects</h4>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
 						{
 							projects.map((project) => (
 								<ProjectCard key={project.id} project={project} />

@@ -13,10 +13,14 @@ export const projects: Project[] = [
       bar [click me](https://google.com)
     `,
     primaryImage: {
-      src: '/projects/charter/schemas.png',
-      description: 'A view of the Charter CMS',
+      src: '/projects/charter/home.png',
+      description: 'Charter CMS and booking engine',
     },
     images: [
+      {
+        src: '/projects/charter/home.png',
+        description: 'Home screen of Charter',
+      },
       {
         src: '/projects/charter/operator.png',
         description: 'A tourism operator and the services they provide',
