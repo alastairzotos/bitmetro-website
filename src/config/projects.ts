@@ -158,5 +158,24 @@ export const projects: Project[] = [
       'NestJS',
       'MongoDB',
     ]
+  },
+  {
+    id: 'persona',
+    name: 'Persona',
+    subtitle: 'Easy Authentication for Node and React',
+    description: 'Foobar',
+    link: 'https://github.com/alastairzotos/persona',
+    github: 'https://github.com/alastairzotos/persona',
+    primaryImage: {
+      src: '/projects/persona/logo-2.jpeg',
+      description: ''
+    },
+    images: [],
+    techStack: [
+      'Typescript',
+      'React',
+      'NestJS',
+      'NodeJS',
+    ]
   }
 ]
