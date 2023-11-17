@@ -56,7 +56,11 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         )}
       </div>
 
-      <Markdown>{project.description}</Markdown>
+      <div className="px-12">
+        <Markdown>
+          {project.description}
+        </Markdown>
+      </div>
 
       <Spacer y={8} />
 
