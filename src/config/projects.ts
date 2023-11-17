@@ -12,7 +12,7 @@ export const projects: Project[] = [
       Charter is a CMS and a booking engine that lets you manage the accounts of local operators, be they boat tours, car rentals, 
       restaurants, or whatever you decide on.
 
-      Admins can define schemas for their service offerings which makes registeting new services an easy and low-friction activity. Using schemas gives admins
+      Admins can define schemas for their service offerings which makes registering new services an easy and low-friction activity. Using schemas gives admins
       control over various payment strategies, service fields and informational content, requests for user data upon booking, etc.
 
       Operators can access the CMS as well. Charter offers restricted access to the operators to manage their own accounts and offerings independently
@@ -22,7 +22,7 @@ export const projects: Project[] = [
       as a Charter frontend, though this is decoupled from the Charter CMS itself. Charter itself is not intended only for Corfu.
 
       Using Charter in our first season we have helped dozens of local businesses enter the online space, and have consistently received positive feedback about it's intuitiveness and ease of use.
-      Customers have clearly found it easy and valuable too, for in the first summer of launch we successfully processed over €10k in bookings.
+      Customers have clearly found it easy and valuable too; in the first summer of launch we successfully processed over €10k in bookings.
     `,
     primaryImage: {
       src: '/projects/charter/home.png',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     name: 'Pictobox',
     subtitle: 'A browser extension to save images to the cloud',
     description: `
-      Pictobox came about to satisfy a need to easily keep photos and graphics that inspire without hassle, and in a device agnostic way.
+      Pictobox came about to satisfy a need to easily save photos and graphics that inspire you to the cloud without hassle.
 
       As a browser extension it takes little effort and friction to keep track of the images you find on the internet for future inspiration, whether you're
       an artist, graphic designer, interior designer, or just a visual person.
@@ -112,6 +112,12 @@ export const projects: Project[] = [
       },
     ],
     link: 'https://pictobox.bitmetro.io',
+    otherLinks: [
+      {
+        title: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/pictobox/minfkineennibjkfgcgijneocbdahmho',
+      }
+    ],
     techStack: [
       'Typescript',
       'React',

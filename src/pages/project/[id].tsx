@@ -42,6 +42,21 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           View
         </Link>
 
+        {
+          project.otherLinks?.map((link, index) => (
+            <Link
+              key={index}
+              isExternal
+              as={NextLink}
+              className={buttonStyles({ variant: "bordered", radius: "full" })}
+              href={link.url}
+            >
+              <IconExternalLink />
+              {link.title}
+            </Link>
+          ))
+        }
+
         {project.github && (
           <Link
             isExternal
