@@ -94,8 +94,8 @@ export const projects: Project[] = [
       Organise your images using tags and easily browse through them with intuitive search capabilities.
     `,
     primaryImage: {
-      src: '/projects/pictobox/main.png',
-      description: 'Pictobox main page',
+      src: '/projects/pictobox/logo-icon.png',
+      description: 'Pictobox logo',
     },
     images: [
       {
