@@ -99,6 +99,10 @@ export const projects: Project[] = [
     },
     images: [
       {
+        src: 'https://www.youtube.com/watch?v=3DQPFCAtBpU',
+        description: 'Pictobox Chrome Extension'
+      },
+      {
         src: '/projects/pictobox/extension.png',
         description: 'Using the Chrome extension to save images to Pictobox',
       },
