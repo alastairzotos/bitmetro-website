@@ -19,7 +19,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
     <DefaultLayout>
       <Spacer y={8} />
-      <h1 className={title({ color: 'violet' })}>{project.name}</h1>
+      <h1 className={title({ color: 'violet', size: 'lg' })}>{project.name}</h1>
       <Spacer />
       <h3 className={subtitle()}>{project.subtitle}</h3>
 

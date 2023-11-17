@@ -17,8 +17,8 @@ export default function IndexPage() {
 		<DefaultLayout>
 			<div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 				<section className="inline-block text-center justify-center">
-					<h1 className={title({ color: "cyan" })}>Fullstack&nbsp;</h1>
-					<h1 className={title()}>Development Services</h1>
+					<h1 className={title({ color: "cyan", size: 'xl' })}>Fullstack&nbsp;</h1>
+					<h1 className={title({ size: 'xl' })}>Development Services</h1>
 					<Spacer y={8} />
 					<p className={subtitle()}>Use <span className="text-purple-500">bitmetro.io</span> for your next fullstack web and mobile development adventure</p>
 				</section>
@@ -45,7 +45,7 @@ export default function IndexPage() {
 				</section>
 
 				<section className="text-center justify-center mt-12 w-full">
-					<h4 className={title({ color: 'green' })}>About</h4>
+					<h4 className={title({ color: 'green', size: 'lg' })}>About</h4>
 					<div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full mt-12">
 						<div className="col-span-6 md:col-span-1 flex justify-center">
 							<Avatar src={meConfig.image.src} className="w-20 h-20 text-large" />
@@ -68,7 +68,7 @@ export default function IndexPage() {
 				</section>
 
 				<section className="inline-block text-center justify-center mt-8">
-					<h4 className={title({ color: 'green' })}>Projects</h4>
+					<h4 className={title({ color: 'green', size: 'lg' })}>Projects</h4>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
 						{
 							projects.map((project) => (
