@@ -1,4 +1,4 @@
-import { title } from '@/components/primitives';
+import { highlight, title } from '@/components/primitives';
 import stripIndent from 'strip-indent';
 import ReactMarkdown from 'react-markdown';
 import { Snippet } from '@nextui-org/react';
@@ -11,6 +11,7 @@ interface Props {
 const languageCodeToName: Record<string, string> = {
   ts: 'typescript',
   yaml: 'yaml',
+  text: 'text',
 }
 
 export const Markdown: React.FC<Props> = ({ children }) => (
@@ -24,7 +25,11 @@ export const Markdown: React.FC<Props> = ({ children }) => (
       'h6': ({ children }) => <h6 className={title({ color: "cyan", size: "xs" })}>{children}</h6>,
       'a': ({ children, href }) => <a href={href} className="underline text-violet-500 no-underline" target="_blank">{children}</a>,
       'p': ({ children }) => <p className='pt-4 leading-7'>{children}</p>,
-      code: ({ className, children }) => {
+      code: ({ className, children, node }) => {
+        if (node?.position?.start.line === node?.position?.end.line) {
+          return <code className={highlight({ color: 'pink' })}>{children}</code>
+        }
+
         const languageCode = className?.split('-').pop()!;
         const content = children as string;
         const [filename, ...code] =

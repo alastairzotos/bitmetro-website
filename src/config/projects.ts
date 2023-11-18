@@ -19,7 +19,7 @@ export const projects: Project[] = [
       so they can have full control over their own services without having to go through the admins.
 
       Charter is a headless CMS and offers an API that can be hooked into from the frontend. For Corfu we created [Corfu Travel Guide](https://www.corfutravelguide.net)
-      as a Charter frontend, though this is decoupled from the Charter CMS itself. Charter itself is not intended only for Corfu.
+      as a Charter frontend, though this is decoupled from the Charter CMS itself. Charter is not intended only for Corfu.
 
       Using Charter in our first season we have helped dozens of local businesses enter the online space, and have consistently received positive feedback about it's intuitiveness and ease of use.
       Customers have clearly found it easy and valuable too; in the first summer of launch we successfully processed over €10k in bookings.
@@ -137,17 +137,17 @@ export const projects: Project[] = [
     name: 'Callisto',
     subtitle: 'A framework for building virtual assistants',
     description: `
-      Callisto makes it easy and straightforward to build virtual assistants using its plugin-based architecture and context-sensitive request processing.
+      Callisto makes it easy and straightforward to build virtual assistants using its plugin-based architecture and context-sensitive conversations.
 
       Callisto can live on your company's servers, on your phone, your Raspberry Pi, or your Docker container. By default Callisto comes as a blank slate, but by
       installing plugins from the Callisto Registry using the Callisto CLI we can configure Callisto to do just what we need it to do and nothing else.
 
-      The beauty of callisto is the ease by which we can write plugins.
+      The beauty of Callisto is the ease by which we can make plugins.
 
-      It's as simple as creating a *plugin.yaml* file in which we define our interactions, supplying an interaction ID, the prompts 
+      It's as simple as creating a \`plugin.yaml\` file in which we define our interactions, supplying an interaction ID, the prompts 
       that Callisto offers the user, and a Regex for potential user inputs.
 
-      Here's an example of a plugin to get the weather. The user can ask about the weather where they are or at a specific location:
+      Here's an example of a plugin to get the weather. The user can ask about the weather where they are or they can ask about a specific location:
 
       ~~~yaml
       __title__: plugin.yaml
@@ -215,7 +215,68 @@ export const projects: Project[] = [
     id: 'phrase-gen',
     name: 'PhraseGen',
     subtitle: 'Advanced keyword multiplier for PPC targeting',
-    description: 'Foobar',
+    description: `
+      PhraseGen grew out of a need to generate higher quality Google Ads keywords than could be created by a typical keyword multiplier.
+
+      A keyword multiplier would take two lists of words and generate every combination of each word from the first list followed by every word from the second.
+      Then we would show our ads to people searching for these search terms.
+
+      While this works for simple search terms, it doesn't target more niche ones.
+
+      Targeting keywords on PPC ad platforms works best when we have many specific, long-tail keywords. Targeting broad search terms
+      such as "phones" may result in many impressions but low click-through-rates and especially low conversion rates.
+      They are also more expensive because you are bidding against many other advertisers for the same ad slot.
+
+      Long tail, specific keywords are cheaper due to lack of competition from bidders, and are more likely to convert because
+      users searching for highly specific things are signaling a strong intent that they are interested in what they're searching for. 
+
+      So there needed to be a solution where we could generate large sets of narrow, long-tail search terms without too much effort, and that's
+      how PhraseGen was born.
+
+      With PhraseGen, we can create phrases and variables containing lists of keywords, and the system will expand them out to all combinations. For example:
+      ~~~yaml
+      __title__: PhraseGen example
+
+      Inputs:
+       - buy @item in @city
+       - @item for sale in @city
+  
+      @item variable:
+       - flowers
+       - pots
+       - chairs
+
+      @city variable:
+       - london
+       - paris
+       - athens
+      ~~~
+
+      The result would be
+      ~~~text
+      __title__: View expanded keywords
+      buy flowers in london
+      buy pots in london
+      buy chairs in london
+      buy flowers in paris
+      buy pots in paris
+      buy chairs in paris
+      buy flowers in athens
+      buy pots in athens
+      buy chairs in athens
+      flowers for sale in london
+      pots for sale in london
+      chairs for sale in london
+      flowers for sale in paris
+      pots for sale in paris
+      chairs for sale in paris
+      flowers for sale in athens
+      pots for sale in athens
+      chairs for sale in athens
+      ~~~
+
+      PhraseGen can also be used as an [NPM package](https://www.npmjs.com/package/@bitmetro/phrase-gen) and through the API.
+    `,
     link: 'https://phrase-gen.bitmetro.io',
     github: 'https://www.github.com/alastairzotos/phrase-gen',
     primaryImage: {
@@ -246,14 +307,162 @@ export const projects: Project[] = [
     id: 'persona',
     name: 'Persona',
     subtitle: 'Easy Authentication for Node and React',
-    description: 'Foobar',
+    description: `
+      Persona is an ExpressJS and React library for making user authentication easy into integrate into your applications.
+
+      It was created to satisfy a need to be avoid vendor lock-in and to own your own data, while keeping simplicity and customisation in mind.
+
+      Though tools like Firebase offer easy authentication, they are hard to integrate into existing applications where the data may be stored elsewhere.
+
+      Using it is straightforward. On the server-side, we create a \`Persona\` instance that takes our configuration, where we tell it which
+      authentication modes we wish to use (Google, Facebook or Email/Password). We then pass it our Express app instance for it to setup
+      the endpoints that the frontend will use.
+
+      In order to keep ownership of our data, we must pass it a \`PersonaAdapter\` instance which we create to get or create users.
+
+      For example:
+      ~~~ts
+      __title__: index.ts
+      const app = express();
+
+      // Create our persona instance
+      const persona = new Persona<User>({
+        jwtSigningKey: process.env.JWT_SIGNING_KEY!,
+
+        // Pass an adapter to handle user data (see below)
+        adapter: new MyAdapter(),
+
+        config: {
+
+          // Make login with email/password available, and ask for the users first name when registering
+          emailPasswordConfig: {
+            userDetails: ['first_name'],
+          },
+
+          // Make login with Google and Facebook available
+          credentials: {
+            google: {
+              id: process.env.GOOGLE_CLIENT_ID!,
+              secret: process.env.GOOGLE_CLIENT_SECRET!,
+            },
+            facebook: {
+              id: process.env.FB_APP_ID!,
+              secret: process.env.FB_APP_SECRET!,
+            }
+          }
+        }
+      });
+
+      persona.setupExpress(app);
+      ~~~
+
+      ~~~ts
+      __title__: adapter.ts
+
+      // The Persona instance will call these methods to get and create users
+      // In them, we can interact with our own database
+      export class MyAdapter implements PersonaAdapter<User> {
+        async getUserByEmail(email: string) {
+          return await mockDb.getUserByEmail(email);
+        }
+      
+        async createUser(email: string, details: UserDetails) {
+          return await mockDb.createUser({ email, firstName: details.first_name! });
+        }
+      }
+      ~~~
+
+      We can then hook up the frontend using the \`PersonaProvider\`. For example, in NextJS:
+      ~~~ts
+      __title__: _app.tsx
+
+      export default function App({ Component, pageProps }: AppProps) {
+        const router = useRouter();
+      
+        return (
+          <PersonaProvider
+            apiUrl='http://localhost:3001'
+            onRegister={() => router.push('/register')}
+            onLogin={() => router.push('/')}
+            theme={extendPersonaTheme({
+              // Customise the theme
+            })}
+          >
+            <Component {...pageProps} />
+          </PersonaProvider>
+        )
+      }      
+      ~~~
+
+      Now Persona will provide us with a \`usePersona()\` hook to access the logged in user and the logout function, as
+      well as the \`<LoginForm />\` and \`<RegisterForm />\` components:
+      ~~~ts
+      __title__: index.tsx
+
+      export default function Home() {
+        const { loggedInUser, logout } = usePersona<User>();
+      
+        return (
+          <>
+            {
+              loggedInUser
+                ? <p>Hello {loggedInUser.firstName}</p>
+                : <LoginForm />
+            }
+
+            {loggedInUser && (
+              <button onClick={logout}>
+                Logout
+              </button>
+            )}
+          </>
+        )
+      }      
+      ~~~
+
+      To protect our routes, we must add a Bearer token using the \`getAccessToken()\` function:
+      ~~~ts
+      const fetchSecretData = async () => {
+        const res = await fetch('http://localhost:3001/secret', {
+          headers: {
+            Authorization: \`Bearer \${getAccessToken()}\`
+          }
+        });
+      
+        return await res.text();
+      }
+      ~~~
+
+      And on the server, we can use the Persona middleware to ensure only authenticated requests get through:
+      ~~~ts
+      app.get('/secret', persona.authGuard, (req, res) => {
+        // Handle the request
+      });
+      ~~~
+
+      We can also make our own auth middleware using the \`persona.verifyAccessToken(string)\` and
+      \`persona.authorize(Request)\` methods.
+    `, 
     link: 'https://github.com/alastairzotos/persona',
     github: 'https://github.com/alastairzotos/persona',
     primaryImage: {
       src: '/projects/persona/logo-2.jpeg',
       description: ''
     },
-    images: [],
+    images: [
+      {
+        src: '/projects/persona/login-form.png',
+        description: 'Default login form when email/password and social logins are enabled',
+      },
+      {
+        src: '/projects/persona/custom.png',
+        description: 'An example of how the form can be customised in any (ugly) way we like',
+      },
+      {
+        src: '/projects/persona/register-form.png',
+        description: 'The registration form for when email/password authentication is enabled and configured to ask for a first name',
+      },
+    ],
     techStack: [
       'Typescript',
       'React',

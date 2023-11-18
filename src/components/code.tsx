@@ -3,6 +3,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { qtcreatorDark as codeStyle } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { title } from '@/components/primitives';
+import Markdown from 'react-markdown';
 
 interface Props {
   filename: string;
@@ -19,9 +20,15 @@ export const CodeSnippet: React.FC<React.PropsWithChildren<Props>> = ({ filename
           title={<span className={title({ color: 'yellow', size: 'sm' })}>{filename}</span>}
           className='p-2'
         >
-          <SyntaxHighlighter language={language} style={codeStyle}>
-            {children}
-          </SyntaxHighlighter>
+          {
+            language === 'text'
+              ? <code>{children}</code>
+              : (
+                <SyntaxHighlighter language={language} style={codeStyle}>
+                  {children}
+                </SyntaxHighlighter>
+              )
+          }
         </AccordionItem>
       </Accordion>
     </div>
