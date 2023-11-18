@@ -81,3 +81,9 @@ export default function IndexPage() {
 		</DefaultLayout >
 	);
 }
+
+export const getStaticProps = async () => {
+	return Promise.resolve({
+		props: {}
+	})
+}

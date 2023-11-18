@@ -5,7 +5,7 @@ import { Project } from "@/types";
 import { Link, Spacer } from "@nextui-org/react";
 import { button as buttonStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import { GetServerSideProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { GithubIcon, IconExternalLink } from "@/components/icons";
 import { ImageGallery } from "@/components/gallery";
 import { TechChip } from "@/components/tech-chip";
@@ -87,8 +87,8 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
 
 export default ProjectPage;
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({ query }) => {
-  const id = query.id as string;
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const id = params?.id as string;
 
   const project = projects.find(project => project.id === id);
 
@@ -102,5 +102,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ query }) =
     props: {
       project,
     }
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = projects.map(({ id }) => ({
+    params: { id }
+  }));
+
+  return {
+    fallback: false,
+    paths,
   }
 }

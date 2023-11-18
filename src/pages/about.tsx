@@ -7,3 +7,9 @@ export default function AboutPage() {
     </DefaultLayout>
   )
 }
+
+export const getStaticProps = async () => {
+	return Promise.resolve({
+    props: {}
+  })
+}
