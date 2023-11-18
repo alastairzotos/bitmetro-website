@@ -471,17 +471,31 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'page-editor',
+    id: 'react-page-editor',
     name: "React Page Editor",
     subtitle: "Intuitive Drag-and-Drop page editor for React",
-    description: "Todo",
+    description: `
+      React Page Editor was made because existing solutions for drag-and-drop page editors were limited at the time.
+
+      The desire was for an editor that was intuitive to use, could use components supplied by the developer, be able to change typed
+      component props within the UI, and return a JSON object that could then be used to render the page.
+      This JSON object could be saved in a database, so the editor could be used as a frontend for a website CMS for instance.
+
+      Existing solutions at the time were limited in what components could be used, how flexible they were for editing those components, or only
+      outputted raw HTML.
+    `,
     link: "https://github.com/alastairzotos/react-page-editor",
     github: "https://github.com/alastairzotos/react-page-editor",
     primaryImage: {
       src: "https://camo.githubusercontent.com/c6b669357ec18fa1acf164aee5611970579e010a47a9ffc636c2fc54d14edaab/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f556f654e6673484e5054674935726d5173412f67697068792e676966",
       description: "Using the React Page Editor",
     },
-    images: [],
+    images: [
+      {
+        src: "https://camo.githubusercontent.com/c6b669357ec18fa1acf164aee5611970579e010a47a9ffc636c2fc54d14edaab/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f556f654e6673484e5054674935726d5173412f67697068792e676966",
+        description: "Using the React Page Editor",
+      }
+    ],
     techStack: [
       'React',
       'Typescript',
