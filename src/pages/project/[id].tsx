@@ -71,7 +71,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         )}
       </div>
 
-      <div className="px-12">
+      <div className="xs:px-6 md:px-12">
         <Markdown>
           {project.description}
         </Markdown>
