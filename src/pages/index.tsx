@@ -16,9 +16,11 @@ export default function IndexPage() {
 	return (
 		<DefaultLayout>
 			<div className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-				<section className="inline-block text-center justify-center">
-					<h1 className={title({ color: "cyan", size: 'xl' })}>Fullstack&nbsp;</h1>
-					<h1 className={title({ size: 'xl' })}>Development Services</h1>
+				<section className="text-center justify-center">
+					<h1 className={title({ size: 'xl'})}>
+						<span className={title({ color: "cyan", size: 'xl' })}>Fullstack</span>&nbsp; Development Services
+					</h1>
+					{/* <h1 className={title({ size: 'xl' })}>Development Services</h1> */}
 					<Spacer y={8} />
 					<p className={subtitle()}>Use <span className="text-purple-500">bitmetro.io</span> for your next fullstack web and mobile development adventure</p>
 				</section>
