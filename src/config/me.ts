@@ -35,7 +35,7 @@ export const meConfig = {
     by modern deployment technologies such as Docker and Kubernetes and how they can drastically improve the developer and user experience.
 
     Since then I have gone on to successfully contribute to many companies where I have grown tremendously from the talent that I was surrounded by. I owe everything to my
-    colleagues for making me a more professional engineer with an eye for excellence and high standards.
+    colleagues for making me a more professional engineer with an eye for excellence and high standards, and to my mum for buying me that copy of DarkBASIC.
 
     In my spare time I love travel, play guitar, read books, socialise, and of course, drink coffee ☕️.
   `,
