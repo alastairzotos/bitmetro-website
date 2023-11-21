@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "BitMetro Fullstack Web Development",
-	description: "Fullstack React + Node web development services",
+	name: "Bitmetro | Fullstack Web Development",
+	description: "Fullstack React + NodeJS development services",
 	navItems: {
 		home: {
 			label: 'Home',
