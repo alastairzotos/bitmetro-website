@@ -54,16 +54,18 @@ export default function IndexPage() {
 					<div className="col-span-6 md:col-span-5 text-left">
 						<Markdown>{meConfig.briefDesc}</Markdown>
 
-						<Button
-							as={NextLink}
-							href={siteConfig.navItems.about.href}
-							className="mt-6"
-							size="md"
-							variant="shadow"
-							color="secondary"
-						>
-							Read more
-						</Button>
+						<div className="flex justify-center md:justify-start">
+							<Button
+								as={NextLink}
+								href={siteConfig.navItems.about.href}
+								className="mt-6"
+								size="md"
+								variant="shadow"
+								color="secondary"
+							>
+								Read more
+							</Button>
+						</div>
 					</div>
 				</div>
 			</section>
