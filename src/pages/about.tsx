@@ -1,6 +1,5 @@
 import { ImageGallery } from "@/components/gallery";
 import { IconEmailOutline } from "@/components/icons";
-import DefaultLayout from "@/components/layouts/default";
 import { Markdown } from "@/components/markdown";
 import { title } from "@/components/primitives";
 import { meConfig } from "@/config/me";
@@ -11,29 +10,27 @@ import NextLink from "next/link";
 
 export default function AboutPage() {
   return (
-    <DefaultLayout>
-      <div className="xs:px-6 md:px-12 mt-8">
-        <Markdown>{meConfig.desc}</Markdown>
+    <div className="xs:px-6 md:px-12 mt-8">
+      <Markdown>{meConfig.desc}</Markdown>
 
-        <Spacer y={8} />
+      <Spacer y={8} />
 
-        <div className="flex justify-center">
-          <Link
-            as={NextLink}
-            className={buttonStyles({ variant: "shadow", radius: "full", color: 'success' , size: 'lg'})}
-            href={siteConfig.links.contact}
-          >
-            <IconEmailOutline width={20} height={20} />
-            Get in touch
-          </Link>
-        </div>
-
-        <Spacer y={8} />
-
-        <h3 className={title({ size: 'md', color: 'cyan' })}>Photos</h3>
-        <ImageGallery images={meConfig.photos} />
+      <div className="flex justify-center">
+        <Link
+          as={NextLink}
+          className={buttonStyles({ variant: "shadow", radius: "full", color: 'success', size: 'lg' })}
+          href={siteConfig.links.contact}
+        >
+          <IconEmailOutline width={20} height={20} />
+          Get in touch
+        </Link>
       </div>
-    </DefaultLayout>
+
+      <Spacer y={8} />
+
+      <h3 className={title({ size: 'md', color: 'cyan' })}>Photos</h3>
+      <ImageGallery images={meConfig.photos} />
+    </div>
   )
 }
 

@@ -1,11 +1,10 @@
-import DefaultLayout from "@/components/layouts/default";
 import { subtitle, title } from "@/components/primitives";
 import { projects } from "@/config/projects";
 import { Project } from "@/types";
 import { Link, Spacer } from "@nextui-org/react";
 import { button as buttonStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { GithubIcon, IconExternalLink } from "@/components/icons";
 import { ImageGallery } from "@/components/gallery";
 import { TechChip } from "@/components/tech-chip";
@@ -17,7 +16,7 @@ interface Props {
 
 const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
-    <DefaultLayout>
+    <>
       <Spacer y={8} />
       <h1 className={title({ color: 'violet', size: 'lg' })}>{project.name}</h1>
       <Spacer />
@@ -80,8 +79,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
       <Spacer y={8} />
 
       <ImageGallery images={project.images} />
-
-    </DefaultLayout>
+    </>
   )
 }
 
