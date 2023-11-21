@@ -22,7 +22,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
       <Spacer />
       <h3 className={subtitle()}>{project.subtitle}</h3>
 
-      <div className="flex gap-2 mt-4">
+      <div className="flex flex-wrap gap-2 mt-4">
         {
           project.techStack.map(tool => (
             <TechChip key={tool} tool={tool} />
