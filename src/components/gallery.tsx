@@ -15,6 +15,8 @@ export const ImageGallery: React.FC<Props> = ({ images }) => {
       showArrows
       infiniteLoop
       className="mt-8"
+      preventMovementUntilSwipeScrollTolerance
+      swipeScrollTolerance={50}
     >
       {images.map((image, index) => (
         <div key={index} className="mb-12">
