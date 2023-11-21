@@ -54,7 +54,7 @@ export default function IndexPage() {
 					<div className="col-span-6 md:col-span-5 text-left">
 						<Markdown>{meConfig.briefDesc}</Markdown>
 
-						<div className="flex justify-center md:justify-start">
+						<div className="flex justify-center sm:justify-start">
 							<Button
 								as={NextLink}
 								href={siteConfig.navItems.about.href}
