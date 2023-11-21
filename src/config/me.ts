@@ -4,9 +4,11 @@ export const meConfig = {
   name: "Alastair",
   tagline: "I develop webapps",
   briefDesc: `
-    Hi, I'm Alastair, the founder of bitmetro.
+    I'm Alastair, the founder of bitmetro.
     
-    I have been developing software since I was 10 years old making games in my bedroom. Since then my interests have grown and I currently work as a full stack software engineer primarily using React and Node.js, with active involvement in DevOps/Infra/CICD. I also build programming languages, virtual assistants, browser plugins, and other curiosities.
+    I am a software engineer with over a decade of experience developing and deploying software across the whole stack.
+    I work on the client and server sides, databases, DevOps, and infrastrucute.  This website is my repository of
+    personal and professional projects and my brochure to the world to help you bring your ideas to reality.
   `,
   desc: `
     ## About

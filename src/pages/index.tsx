@@ -21,7 +21,7 @@ export default function IndexPage() {
 				</h1>
 				{/* <h1 className={title({ size: 'xl' })}>Development Services</h1> */}
 				<Spacer y={8} />
-				<p className={subtitle()}>Use <span className="text-purple-500">bitmetro.io</span> for your next fullstack web and mobile development adventure</p>
+				<p className={subtitle()}>Use <span className="text-purple-500">bitmetro</span> for your next fullstack web and mobile development adventure</p>
 			</section>
 
 			<section className="flex gap-3 mt-8">
