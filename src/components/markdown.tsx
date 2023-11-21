@@ -17,12 +17,12 @@ const languageCodeToName: Record<string, string> = {
 export const Markdown: React.FC<Props> = ({ children }) => (
   <ReactMarkdown
     components={{
-      'h1': ({ children }) => <h1 className={title({ color: "cyan", size: "xs" })}>{children}</h1>,
-      'h2': ({ children }) => <h2 className={title({ color: "cyan", size: "xs" })}>{children}</h2>,
-      'h3': ({ children }) => <h3 className={title({ color: "cyan", size: "xs" })}>{children}</h3>,
-      'h4': ({ children }) => <h4 className={title({ color: "cyan", size: "xs" })}>{children}</h4>,
-      'h5': ({ children }) => <h5 className={title({ color: "cyan", size: "xs" })}>{children}</h5>,
-      'h6': ({ children }) => <h6 className={title({ color: "cyan", size: "xs" })}>{children}</h6>,
+      'h1': ({ children }) => <h1 className={title({ color: "cyan", size: "lg" })}>{children}</h1>,
+      'h2': ({ children }) => <h2 className={title({ color: "cyan", size: "lg" })}>{children}</h2>,
+      'h3': ({ children }) => <h3 className={title({ color: "cyan", size: "lg" })}>{children}</h3>,
+      'h4': ({ children }) => <h4 className={title({ color: "cyan", size: "lg" })}>{children}</h4>,
+      'h5': ({ children }) => <h5 className={title({ color: "cyan", size: "lg" })}>{children}</h5>,
+      'h6': ({ children }) => <h6 className={title({ color: "cyan", size: "lg" })}>{children}</h6>,
       'a': ({ children, href }) => <a href={href} className="underline text-violet-500 no-underline" target="_blank">{children}</a>,
       'p': ({ children }) => <p className='pt-4 leading-7'>{children}</p>,
       code: ({ className, children, node }) => {
