@@ -48,7 +48,7 @@ export default function IndexPage() {
 			<section className="text-center justify-center mt-12 w-full">
 				<h4 className={title({ color: 'green', size: 'lg' })}>About</h4>
 				<div className="grid grid-cols-1 md:grid-cols-6 gap-8 w-full mt-12">
-					<div className="col-span-6 md:col-span-1 flex justify-center">
+					<div className="col-span-6 md:col-span-1 flex justify-center items-center">
 						<Avatar src={meConfig.image.src} className="w-20 h-20 text-large" />
 					</div>
 					<div className="col-span-6 md:col-span-5 text-left">
