@@ -151,7 +151,6 @@ export const projects: Project[] = [
 
       ~~~yaml
       __title__: plugin.yaml
-      resolve: ./dist/index.js
       interactions:
         - id: with-location
           prompts:
