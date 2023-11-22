@@ -7,7 +7,7 @@ export const meConfig = {
     I'm Alastair, the founder of bitmetro.
     
     I am a software engineer with over a decade of experience developing and deploying software across the whole stack.
-    I work on the client and server sides, databases, DevOps, and infrastrucute.  This website is my repository of
+    I work on the client and server sides, databases, DevOps, and infrastructure.  This website is my repository of
     personal and professional projects and my brochure to the world to help you bring your ideas to reality.
   `,
   desc: `
