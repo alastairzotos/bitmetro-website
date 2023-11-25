@@ -178,9 +178,11 @@ export const projects: Project[] = [
       __title__: index.ts
       onInteraction('with-location', async (time = 'today', location) => await getWeather(time!, location!))
 
-      onInteraction('no-location', (time = 'today') => new Promise<string>((resolve) => {
-        sendQuestion('Where do you live?', async location => resolve(await getWeather(time!, location!)!))
-      }))
+      onInteraction('no-location', async (time = 'today') => {
+        const location = await askQuestion('Where would you like to know the weather for?');
+      
+        return await getWeather(time!, location!);
+      })      
       ~~~
 
       Callisto can handle many simultaneous conversations by running each on its own websocket connection and running each plugin as an isolated
