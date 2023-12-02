@@ -25,7 +25,7 @@ export const projects: Project[] = [
       Customers have clearly found it easy and valuable too; in the first summer of launch we successfully processed over €10k in bookings.
     `,
     primaryImage: {
-      src: '/projects/charter/home.png',
+      src: '/projects/charter/charter-large-white-bg.png',
       description: 'Charter CMS and booking engine',
     },
     images: [
