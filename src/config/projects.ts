@@ -488,12 +488,12 @@ export const projects: Project[] = [
     link: "https://github.com/alastairzotos/react-page-editor",
     github: "https://github.com/alastairzotos/react-page-editor",
     primaryImage: {
-      src: "https://camo.githubusercontent.com/c6b669357ec18fa1acf164aee5611970579e010a47a9ffc636c2fc54d14edaab/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f556f654e6673484e5054674935726d5173412f67697068792e676966",
+      src: "https://i.giphy.com/UoeNfsHNPTgI5rmQsA.webp",
       description: "Using the React Page Editor",
     },
     images: [
       {
-        src: "https://camo.githubusercontent.com/c6b669357ec18fa1acf164aee5611970579e010a47a9ffc636c2fc54d14edaab/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f556f654e6673484e5054674935726d5173412f67697068792e676966",
+        src: "https://i.giphy.com/UoeNfsHNPTgI5rmQsA.webp",
         description: "Using the React Page Editor",
       }
     ],
