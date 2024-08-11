@@ -2,7 +2,7 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    cardStyle: 'col-span-1 sm:col-span-2',
+    // cardStyle: 'col-span-1 sm:col-span-2',
     primaryTitle: true,
     id: 'minervai',
     name: 'Minervai',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    cardStyle: 'row-span-2',
+    // cardStyle: 'row-span-2',
     id: 'charter',
     name: 'Charter',
     subtitle: 'A booking engine and CMS to bring value to the tourism sector',
