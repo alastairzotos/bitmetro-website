@@ -72,8 +72,8 @@ export const Menu: React.FC<Props> = ({ onClose }) => {
             <div className="m-4">
               {groups.map((group, i) => (
                 <div key={i} className="border-y-1 border-style-solid border-slate-400">
-                  {group.map((item, i) => (
-                    <Link href={item.href} target={item.external ? "_blank" : "_self"}>
+                  {group.map((item, j) => (
+                    <Link key={j} href={item.href} target={item.external ? "_blank" : "_self"}>
                       <div className="flex items-center">
                         <h4 className="p-2">
                           {item.label}
