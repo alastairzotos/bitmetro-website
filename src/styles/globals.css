@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scrollBackground {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: -100% -100%;
+  }
+}
+
+.scrolling-background {
+  @apply absolute top-0 left-0 w-screen h-screen bg-cover bg-repeat;
+  animation: scrollBackground 20s linear infinite;
+  filter: brightness(0.15);
+}

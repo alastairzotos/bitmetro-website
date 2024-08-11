@@ -20,7 +20,7 @@ export default function IndexPage() {
               href={siteConfig.navItems.about.href}
               className="mt-6"
               size="md"
-              variant="solid"
+              variant="flat"
               color="success"
             >
               Read more
@@ -29,7 +29,7 @@ export default function IndexPage() {
         )
       }}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[minmax(0, 1fr)] gap-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         {
           projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

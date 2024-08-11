@@ -26,9 +26,7 @@ const toolMap: Record<TechTool, React.ReactNode> = {
 export const TechChip: React.FC<Props> = ({ tool }) => {
   return (
     <Chip
-      // variant="faded"
-      variant="shadow"
-      // color="secondary"
+      variant="flat"
       color="success"
       startContent={toolMap[tool]}
       className="pl-2"
