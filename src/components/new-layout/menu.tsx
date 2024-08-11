@@ -60,7 +60,7 @@ export const Menu: React.FC<Props> = ({ onClose }) => {
       className="fixed top-0 right-0 bottom-0 left-0 bg-white/10 flex justify-end p-6"
       onClick={handleClickOut}
     >
-      <div className={"border-1 border-solid border-slate-400 bg-slate-800 transition-w duration-200 ease-in-out " + (menuOpen ? "w-1/4 h-full" : "w-0 h-0")}>
+      <div className={"border-1 border-solid border-slate-400 bg-slate-800 transition-w duration-200 ease-in-out " + (menuOpen ? "w-full md:w-1/2 xl:w-1/4 h-full" : "w-0 h-0")}>
         {menuOpen && (
           <>
             <div className="flex justify-end p-2">
