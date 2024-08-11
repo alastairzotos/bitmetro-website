@@ -3,13 +3,7 @@ import { ProjectImage } from "@/types";
 export const meConfig = {
   name: "Alastair",
   tagline: "I develop webapps",
-  briefDesc: `
-    I'm Alastair, the founder of bitmetro.
-    
-    I am a software engineer with over a decade of experience developing and deploying software across the whole stack.
-    I work on the client and server sides, databases, DevOps, and infrastructure.  This website is my repository of
-    personal and professional projects and my brochure to the world to help you bring your ideas to reality.
-  `,
+  briefDesc: `I'm Alastair, the founder of bitmetro.`,
   desc: `
     Bitmetro started as a repository of my passion projects, but has since grown into a professional 
     software studio since the creation of [Charter](/project/charter).

@@ -9,7 +9,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   return (
     <header>
-      <div className="relative w-full aspect-square lg:aspect-[2/1]">
+      <div className="relative w-full md:aspect-square lg:aspect-[2/1]">
         <GridBoxes />
 
         <ContentBoxes ref={headerRef} {...props} />

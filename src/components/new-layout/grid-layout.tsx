@@ -1,6 +1,7 @@
 import React from "react";
-import { Header, HeaderProps } from "@/components/new-layout/header";
+import { Header } from "@/components/new-layout/header";
 import { Footer } from "@/components/new-layout/footer";
+import { HeaderProps } from "@/components/new-layout/header-props";
 
 interface Props {
   headerProps: HeaderProps;
@@ -8,7 +9,7 @@ interface Props {
 
 export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerProps, children }) => {
   return (
-    <div>
+    <div className="relative w-full h-full">
       <div
         className="scrolling-background"
         style={{ backgroundImage: 'url(/backgrounds/bg-3.avif)', }}
