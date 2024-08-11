@@ -2,6 +2,50 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    cardStyle: 'col-span-1 sm:col-span-2',
+    primaryTitle: true,
+    id: 'minervai',
+    name: 'Minervai',
+    subtitle: 'E-commerce AI chatbot integrations made easy',
+    description: `
+      Minervai is a work-in-progress SaaS applications that allows owners of e-commerce shops to easily
+      integrate AI into their websites and apps to help customers make purchase decisions and upsells.
+
+      E-shop owners create an account on the app, upload their item collections (or integrate with the API for automatic synching)
+      and then embed some HTML or React code into their site to get the chatbox up and running.
+    `,
+    primaryImage: {
+      src: '/projects/minervai/collection.png',
+      description: 'Minervai AI integration',
+    },
+    images: [
+      {
+        src: '/projects/minervai/collection.png',
+        description: "An example collection of items that the AI can recommend to customers",
+      },
+      {
+        src: '/projects/minervai/embed.png',
+        description: "Embedding the chatbox is as easy as copying and pasting the code into your website",
+      },
+      {
+        src: '/projects/minervai/chatbox.png',
+        description: "How the chatbot looks by default",
+      },
+    ],
+    link: 'https://minervai.bitmetro.io',
+    techStack: [
+      'NestJS',
+      'NextJS',
+      'NodeJS',
+      'React',
+      'Typescript',
+      'PostgreSQL',
+      'GPT API',
+      'Vector Database',
+    ],
+  },
+  {
+    cardStyle: 'row-span-2',
     id: 'charter',
     name: 'Charter',
     subtitle: 'A booking engine and CMS to bring value to the tourism sector',

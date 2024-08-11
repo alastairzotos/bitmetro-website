@@ -9,6 +9,7 @@ import { GithubIcon, IconExternalLink } from "@/components/icons";
 import { ImageGallery } from "@/components/gallery";
 import { TechChip } from "@/components/tech-chip";
 import { Markdown } from "@/components/markdown";
+import { GridLayout } from "@/components/new-layout/grid-layout";
 
 interface Props {
   project: Project;
@@ -16,13 +17,57 @@ interface Props {
 
 const ProjectPage: NextPage<Props> = ({ project }) => {
   return (
-    <>
-      <Spacer y={8} />
-      <h1 className={title({ color: 'violet', size: 'lg' })}>{project.name}</h1>
-      <Spacer />
-      <h3 className={subtitle()}>{project.subtitle}</h3>
+    <GridLayout
+      headerProps={{
+        title: project.name,
+        content: (
+          <div>
+            <h3 className={subtitle()}>{project.subtitle}</h3>
 
-      <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex gap-2 mt-4 mb-8">
+              <Link
+                isExternal
+                as={NextLink}
+                className={buttonStyles({ variant: "bordered", radius: "full" })}
+                href={project.link}
+              >
+                <IconExternalLink />
+                View
+              </Link>
+
+              {
+                project.otherLinks?.map((link, index) => (
+                  <Link
+                    key={index}
+                    isExternal
+                    as={NextLink}
+                    className={buttonStyles({ variant: "bordered", radius: "full" })}
+                    href={link.url}
+                  >
+                    <IconExternalLink />
+                    {link.title}
+                  </Link>
+                ))
+              }
+
+              {project.github && (
+                <Link
+                  isExternal
+                  // showAnchorIcon
+                  as={NextLink}
+                  className={buttonStyles({ variant: "bordered", radius: "full" })}
+                  href={project.github}
+                >
+                  <GithubIcon size={20} />
+                  GitHub
+                </Link>
+              )}
+            </div>
+          </div>
+        )
+      }}
+    >
+      <div className="flex flex-wrap gap-2">
         {
           project.techStack.map(tool => (
             <TechChip key={tool} tool={tool} />
@@ -30,57 +75,15 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         }
       </div>
 
-      <div className="flex gap-2 mt-4 mb-8">
-        <Link
-          isExternal
-          as={NextLink}
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={project.link}
-        >
-          <IconExternalLink />
-          View
-        </Link>
-
-        {
-          project.otherLinks?.map((link, index) => (
-            <Link
-              key={index}
-              isExternal
-              as={NextLink}
-              className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={link.url}
-            >
-              <IconExternalLink />
-              {link.title}
-            </Link>
-          ))
-        }
-
-        {project.github && (
-          <Link
-            isExternal
-            // showAnchorIcon
-            as={NextLink}
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={project.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        )}
-      </div>
-
-      <div className="xs:px-6 md:px-12">
-        <Markdown>
-          {project.description}
-        </Markdown>
-      </div>
+      <Markdown>
+        {project.description}
+      </Markdown>
 
       <Spacer y={8} />
 
       <ImageGallery images={project.images} />
-    </>
-  )
+    </GridLayout>
+  );
 }
 
 export default ProjectPage;

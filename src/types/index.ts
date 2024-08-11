@@ -15,6 +15,9 @@ export const techTools = [
   'MongoDB',
   'MUI',
   'Antd',
+  'PostgreSQL',
+  'GPT API',
+  'Vector Database',
 ] as const
 
 export type TechTool = typeof techTools[number];
@@ -40,4 +43,6 @@ export interface Project {
   link: string;
   otherLinks?: OtherLink[];
   github?: string;
+  cardStyle?: string;
+  primaryTitle?: boolean;
 }

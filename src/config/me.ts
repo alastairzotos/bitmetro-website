@@ -11,8 +11,6 @@ export const meConfig = {
     personal and professional projects and my brochure to the world to help you bring your ideas to reality.
   `,
   desc: `
-    ## About
-
     Bitmetro started as a repository of my passion projects, but has since grown into a professional 
     software studio since the creation of [Charter](/project/charter).
 

@@ -3,15 +3,14 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { fontSans, fontMono } from "@/config/fonts";
 import type { AppProps } from "next/app";
-import DefaultLayout from "@/components/layouts/default";
+import { Head } from "@/components/new-layout/head";
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<NextUIProvider>
 			<NextThemesProvider>
-				<DefaultLayout>
-					<Component {...pageProps} />
-				</DefaultLayout>
+				<Head />
+				<Component {...pageProps} />
 			</NextThemesProvider>
 		</NextUIProvider>
 	);

@@ -1,4 +1,4 @@
-import { IconAntdesign, IconBxlNodejs, IconBxlReact, IconBxlStripe, IconLanguageTypescript, IconMongodb, IconMui, IconNestjs, IconNextjs, IconSocketdotio } from "@/components/icons";
+import { IconAntdesign, IconBxBrain, IconBxlNodejs, IconBxlReact, IconBxlStripe, IconLanguageTypescript, IconMongodb, IconMui, IconNestjs, IconNextjs, IconOpenAI, IconPostgres, IconSocketdotio } from "@/components/icons";
 import { TechTool } from "@/types"
 import { Chip } from "@nextui-org/react";
 import React from "react";
@@ -18,6 +18,9 @@ const toolMap: Record<TechTool, React.ReactNode> = {
   'Antd': <IconAntdesign />,
   'Sockets': <IconSocketdotio />,
   'Stripe': <IconBxlStripe />,
+  'PostgreSQL': <IconPostgres />,
+  'GPT API': <IconOpenAI />,
+  'Vector Database': <IconBxBrain />,
 }
 
 export const TechChip: React.FC<Props> = ({ tool }) => {
