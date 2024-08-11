@@ -29,7 +29,7 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [headerRef.current, scrolledPastHeader]);
 
-  const menuItemClassName = "outline outline-slate-400 outline-solid transition-bg duration-100 ease-in-out bg-black hover:bg-slate-800" + (!scrolledPastHeader ? " min-w-[33%] lg:min-w-[16.6%]" : "");
+  const menuItemClassName = "border-1 border-slate-400 border-solid transition-bg duration-100 ease-in-out bg-black hover:bg-slate-800" + (!scrolledPastHeader ? " min-w-[33%] lg:min-w-[16.6%]" : "");
 
   return (
     <div className="fixed top-0 right-0 left-0 xl:m-4 z-[99999]">
