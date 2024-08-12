@@ -43,6 +43,6 @@ export interface Project {
   link: string;
   otherLinks?: OtherLink[];
   github?: string;
-  cardStyle?: string;
   primaryTitle?: boolean;
+  cardStyle?: string;
 }

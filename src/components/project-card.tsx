@@ -9,9 +9,10 @@ interface Props {
 }
 
 export const ProjectCard: React.FC<Props> = ({ project }) => {
+  const className = (project.cardStyle || 'col-span-1') + ' bg-slate-900 hover:bg-slate-800 border border-slate-600 transition-all duration-150 ease-in-out p-6';
+  
   return (
-    // + }>
-    <div className={(project.cardStyle || '') + ' bg-slate-900 hover:bg-slate-800 border border-slate-600 transition-all duration-150 ease-in-out p-6'}> 
+    <div className={className}> 
       <Link href={`/project/${project.id}`}>
         <div className="pb-0 pt-2 px-4 flex-col items-start">
           <h2 className={title({ size: project.primaryTitle ? 'lg' : 'md', color: project.primaryTitle ? 'green' : 'blue' })}>{project.name}</h2>
