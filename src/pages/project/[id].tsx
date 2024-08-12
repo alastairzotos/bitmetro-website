@@ -1,9 +1,7 @@
-import { subtitle, title } from "@/components/primitives";
+import { subtitle } from "@/components/primitives";
 import { projects } from "@/config/projects";
 import { Project } from "@/types";
-import { Link, Spacer } from "@nextui-org/react";
-import { button as buttonStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
+import { Spacer } from "@nextui-org/react";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { GithubIcon, IconExternalLink } from "@/components/icons";
 import { ImageGallery } from "@/components/gallery";
@@ -24,46 +22,6 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
         content: (
           <div>
             <h3 className={subtitle()}>{project.subtitle}</h3>
-
-            <div className="flex gap-2 mt-4 mb-8">
-              {/* <Link
-                isExternal
-                as={NextLink}
-                className={buttonStyles({ variant: "bordered", radius: "full" })}
-                href={project.link}
-              >
-                <IconExternalLink />
-                View
-              </Link>
-
-              {
-                project.otherLinks?.map((link, index) => (
-                  <Link
-                    key={index}
-                    isExternal
-                    as={NextLink}
-                    className={buttonStyles({ variant: "bordered", radius: "full" })}
-                    href={link.url}
-                  >
-                    <IconExternalLink />
-                    {link.title}
-                  </Link>
-                ))
-              }
-
-              {project.github && (
-                <Link
-                  isExternal
-                  // showAnchorIcon
-                  as={NextLink}
-                  className={buttonStyles({ variant: "bordered", radius: "full" })}
-                  href={project.github}
-                >
-                  <GithubIcon size={20} />
-                  GitHub
-                </Link>
-              )} */}
-            </div>
           </div>
         ),
 
