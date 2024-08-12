@@ -9,7 +9,7 @@ interface Props {
 
 export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerProps, children }) => {
   return (
-    <div className="relative w-full h-full">
+    <div>
       <div
         className="scrolling-background"
         style={{ backgroundImage: 'url(/backgrounds/bg-3.avif)', }}
@@ -19,7 +19,7 @@ export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerPro
       <div className="relative xl:p-4">
         <Header {...headerProps} />
 
-        <main className="p-4 mt-6 bg-slate-950">
+        <main className="p-2 md:p-4 mt-6 bg-slate-950">
           {children}
         </main>
       </div>
