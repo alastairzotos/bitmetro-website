@@ -41,8 +41,9 @@ export interface Project {
   primaryImage: ProjectImage;
   images: ProjectImage[];
   link: string;
-  otherLinks?: OtherLink[];
+  // otherLinks?: OtherLink[];
   github?: string;
+  chromeWebStore?: string;
   primaryTitle?: boolean;
   cardStyle?: string;
 }

@@ -1,5 +1,3 @@
-import NextLink from "next/link";
-import { Button } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { subtitle } from "@/components/primitives";
 import { projects } from "@/config/projects";
@@ -14,19 +12,12 @@ export default function IndexPage() {
         content: (
           <div>
             <p className={subtitle()}>Use <span className="text-cyan-500">bitmetro</span> for your next web enterprise</p>
-
-            <Button
-              as={NextLink}
-              href={siteConfig.navItems.about.href}
-              className="mt-6"
-              size="md"
-              variant="flat"
-              color="success"
-            >
-              Read more
-            </Button>
           </div>
-        )
+        ),
+        links: [{
+          title: 'Read more',
+          url: siteConfig.navItems.about.href,
+        }],
       }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">

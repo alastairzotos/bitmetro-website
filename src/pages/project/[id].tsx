@@ -10,6 +10,7 @@ import { ImageGallery } from "@/components/gallery";
 import { TechChip } from "@/components/tech-chip";
 import { Markdown } from "@/components/markdown";
 import { GridLayout } from "@/components/new-layout/grid-layout";
+import { HeaderLink } from "@/components/new-layout/header-props";
 
 interface Props {
   project: Project;
@@ -25,7 +26,7 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
             <h3 className={subtitle()}>{project.subtitle}</h3>
 
             <div className="flex gap-2 mt-4 mb-8">
-              <Link
+              {/* <Link
                 isExternal
                 as={NextLink}
                 className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -61,10 +62,27 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
                   <GithubIcon size={20} />
                   GitHub
                 </Link>
-              )}
+              )} */}
             </div>
           </div>
-        )
+        ),
+
+        links: [
+          {
+            title: 'View',
+            url: project.link,
+          },
+          project.github ? {
+            title: 'GitHub',
+            url: project.github,
+            icon: <GithubIcon size={20} />,
+          } : undefined,
+          project.chromeWebStore ? {
+            title: 'Chrome Web Store',
+            url: project.chromeWebStore,
+            icon: <IconExternalLink />,
+          } : undefined,
+        ].filter(l => l !== undefined) as HeaderLink[],
       }}
     >
       <div className="flex flex-wrap gap-2">

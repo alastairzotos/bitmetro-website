@@ -160,12 +160,7 @@ export const projects: Project[] = [
       },
     ],
     link: 'https://pictobox.bitmetro.io',
-    otherLinks: [
-      {
-        title: 'Chrome Web Store',
-        url: 'https://chromewebstore.google.com/detail/pictobox/minfkineennibjkfgcgijneocbdahmho',
-      }
-    ],
+    chromeWebStore: 'https://chromewebstore.google.com/detail/pictobox/minfkineennibjkfgcgijneocbdahmho',
     techStack: [
       'Typescript',
       'React',

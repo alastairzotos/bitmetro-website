@@ -5,9 +5,7 @@ import { GridLayout } from "@/components/new-layout/grid-layout";
 import { title } from "@/components/primitives";
 import { meConfig } from "@/config/me";
 import { siteConfig } from "@/config/site";
-import { Link, Spacer } from "@nextui-org/react";
-import { button as buttonStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
+import { Spacer } from "@nextui-org/react";
 
 export default function AboutPage() {
   return (
@@ -17,17 +15,13 @@ export default function AboutPage() {
         content: (
           <div>
             <Markdown>{meConfig.briefDesc}</Markdown>
-
-            <Link
-              as={NextLink}
-              className={'mt-4 ' + buttonStyles({ variant: "flat", color: 'success', size: 'lg' })}
-              href={siteConfig.links.contact}
-            >
-              <IconEmailOutline width={20} height={20} />
-              Get in touch
-            </Link>
           </div>
-        )
+        ),
+        links: [{
+          title: 'Get in touch',
+          url: siteConfig.links.contact,
+          icon: <IconEmailOutline width={20} height={20} />,
+        }],
       }}
     >
       <Markdown>{meConfig.desc}</Markdown>
