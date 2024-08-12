@@ -13,6 +13,6 @@
 
 .scrolling-background {
   @apply absolute top-0 left-0 w-full h-full bg-cover bg-repeat;
-  animation: scrollBackground 40s linear infinite;
+  animation: scrollBackground 25s linear infinite;
   filter: brightness(0.15);
 }
