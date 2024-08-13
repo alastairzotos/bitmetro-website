@@ -47,7 +47,7 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
           <Link href="/" className="w-full h-full">
             <div className="flex w-full items-center gap-4 m-4">
               <Logo />
-              {!scrolledPastHeader && <span>BitMetro</span>}
+              {!scrolledPastHeader && <span>Bitmetro</span>}
             </div>
           </Link>
         </div>
