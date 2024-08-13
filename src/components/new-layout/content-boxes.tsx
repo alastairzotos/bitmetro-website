@@ -7,7 +7,7 @@ import { HeaderButton } from '@/components/new-layout/header-button';
 export const ContentBoxes = forwardRef<HTMLDivElement, HeaderProps>(({ title, content, links }, ref) => (
   <div ref={ref} className="relative w-full h-full grid grid-cols-2 grid-rows-3">
     <div className="border-1 border-solid border-slate-400 col-span-2 lg:col-span-1 row-span-2 lg:row-span-3">
-      <div className="flex items-end lg:items-center p-6 w-full h-full">
+      <div className="flex items-end lg:items-center p-6 w-full h-full min-h-[400px]">
         <h1 className={titleText({ size: 'lg' })}>{title}</h1>
       </div>
     </div>

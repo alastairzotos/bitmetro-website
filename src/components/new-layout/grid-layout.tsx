@@ -5,9 +5,10 @@ import { HeaderProps } from "@/components/new-layout/header-props";
 
 interface Props {
   headerProps: HeaderProps;
+  pad?: boolean;
 }
 
-export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerProps, children }) => {
+export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerProps, pad = true, children }) => {
   return (
     <div>
       <div
@@ -19,8 +20,10 @@ export const GridLayout: React.FC<React.PropsWithChildren<Props>> = ({ headerPro
       <div className="relative xl:p-4">
         <Header {...headerProps} />
 
-        <main className="p-2 md:p-4 mt-6 bg-slate-950">
-          {children}
+        <main className="mt-6 bg-slate-950">
+          <div className={pad ? "p-2 md:p-4" : ''}>
+            {children}
+          </div>
         </main>
       </div>
 
