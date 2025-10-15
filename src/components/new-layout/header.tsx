@@ -38,8 +38,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none" style={{ position: 'absolute', left: 0, top: 0 }}>
             <defs>
               <linearGradient id="waveGradient1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.12" />
-                <stop offset="100%" stopColor="#6366f1" stopOpacity="0.12" />
+                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.07" />
+                <stop offset="100%" stopColor="#6366f1" stopOpacity="0.07" />
               </linearGradient>
             </defs>
             <path fill="url(#waveGradient1)" filter="url(#neon-glow)">
@@ -55,8 +55,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none" style={{ position: 'absolute', left: 0, top: 0 }}>
             <defs>
               <linearGradient id="waveGradient2" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stopColor="#a855f7" stopOpacity="0.18" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.18" />
+                <stop offset="0%" stopColor="#a855f7" stopOpacity="0.09" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.09" />
               </linearGradient>
             </defs>
             <path fill="url(#waveGradient2)" filter="url(#neon-glow)">

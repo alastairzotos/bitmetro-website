@@ -57,28 +57,28 @@ export const Menu: React.FC<Props> = ({ onClose }) => {
   return (
     <div
       ref={bgRef}
-      className="fixed top-0 right-0 bottom-0 left-0 bg-white/10 flex justify-end p-6"
+      className="fixed top-0 right-0 bottom-0 left-0 bg-slate-900/80 flex justify-end p-6 backdrop-blur-sm"
       onClick={handleClickOut}
     >
-      <div className={"border-1 border-solid border-slate-400 bg-slate-800 transition-w duration-200 ease-in-out " + (menuOpen ? "w-full md:w-1/2 xl:w-1/4 h-full" : "w-0 h-0")}>
+      <div className={"border border-cyan-800 bg-slate-900/95 shadow-2xl rounded-xl transition-all duration-200 ease-in-out " + (menuOpen ? "w-full md:w-1/2 xl:w-1/4 h-full" : "w-0 h-0")}> 
         {menuOpen && (
           <>
             <div className="flex justify-end p-2">
-              <button onClick={handleClose}>
-                <CloseIcon size={30} />
+              <button onClick={handleClose} className="text-slate-400 hover:text-cyan-400 transition-colors duration-150">
+                <CloseIcon size={28} />
               </button>
             </div>
 
             <div className="m-4">
               {groups.map((group, i) => (
-                <div key={i} className="border-y-1 border-style-solid border-slate-400">
+                <div key={i} className="border-t border-b border-slate-700 py-2">
                   {group.map((item, j) => (
                     <Link key={j} href={item.href} target={item.external ? "_blank" : "_self"}>
-                      <div className="flex items-center">
-                        <h4 className="p-2">
+                      <div className="flex items-center group">
+                        <h4 className="p-2 text-white group-hover:text-cyan-400 transition-colors duration-150">
                           {item.label}
                         </h4>
-                        {item.external && <IconExternalLink />}
+                        {item.external && <IconExternalLink className="ml-2 text-cyan-700 group-hover:text-cyan-400 opacity-80" />}
                       </div>
                     </Link>
                   ))}

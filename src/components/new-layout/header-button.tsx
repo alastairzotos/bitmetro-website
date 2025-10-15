@@ -12,7 +12,7 @@ export const HeaderButton: React.FC<HeaderLink> = ({
 }) => {
   return (
     <Link href={url} target={external ? "_blank" : "_self"}>
-      <div className="w-full h-full transition-all duration-150 ease-in-out bg-slate-800/50 hover:bg-slate-800 border border-slate-600 flex justify-center items-center gap-4 p-4">
+  <div className="w-full h-full transition-all duration-150 ease-in-out bg-slate-900/60 hover:bg-cyan-700/70 border border-slate-700 hover:border-cyan-400 flex justify-center items-center gap-4 p-4 text-white hover:text-white/90 hover:shadow-lg">
         <h3 className={titleText({ size: 'md' })}>{title}</h3>
         {icon}
       </div>

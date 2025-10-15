@@ -39,7 +39,7 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
   }, [headerRef.current, scrolledPastHeader, scrolledFirstThird]);
 
   const menuItemClassName =
-    "border border-slate-700 bg-slate-900/80 hover:bg-slate-800/80 shadow-lg transition-all duration-500 ease-in-out" +
+    "border border-slate-700 bg-slate-900/60 hover:bg-cyan-700/70 hover:border-cyan-400 shadow-lg transition-all duration-500 ease-in-out" +
     (!scrolledPastHeader
       ? " min-w-[33%] lg:min-w-[16.6%] px-6 py-2"
       : " min-w-[56px] lg:min-w-[56px] px-6 py-2");
@@ -47,7 +47,7 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
   return (
     <div className="fixed top-0 right-0 left-0 xl:m-4 z-[99999]">
       <nav className={`w-full flex justify-between border-1 transition duration-300 ease-in-out border-${scrolledFirstThird ? "transparent" : "slate-400"} border-solid`}>
-        <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'} style={{ opacity: scrolledFirstThird ? 0.6 : 1 }}>
+  <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'} style={{ opacity: scrolledFirstThird ? 0.6 : 1 }}>
           <Link href="/" className="w-full h-full">
             <div className="flex w-full items-center gap-4">
               <Logo />
@@ -66,7 +66,7 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
           </Link>
         </div>
 
-        <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'}>
+  <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'}>
           <button
             className="w-full"
             onClick={() => setMenuOpen(true)}
