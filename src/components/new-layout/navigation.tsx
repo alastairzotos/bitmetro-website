@@ -38,27 +38,51 @@ export const Navigation: React.FC<Props> = ({ headerRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [headerRef.current, scrolledPastHeader, scrolledFirstThird]);
 
-  const menuItemClassName = "border-1 border-slate-400 border-solid transition-bg duration-100 ease-in-out bg-black hover:bg-slate-800" + (!scrolledPastHeader ? " min-w-[33%] lg:min-w-[16.6%]" : "");
+  const menuItemClassName =
+    "border border-slate-700 bg-slate-900/80 hover:bg-slate-800/80 shadow-lg transition-all duration-500 ease-in-out" +
+    (!scrolledPastHeader
+      ? " min-w-[33%] lg:min-w-[16.6%] px-6 py-2"
+      : " min-w-[56px] lg:min-w-[56px] px-6 py-2");
 
   return (
     <div className="fixed top-0 right-0 left-0 xl:m-4 z-[99999]">
       <nav className={`w-full flex justify-between border-1 transition duration-300 ease-in-out border-${scrolledFirstThird ? "transparent" : "slate-400"} border-solid`}>
-        <div className={menuItemClassName + ' transition-opacity duration-300 ease-in-out'} style={{ opacity: scrolledFirstThird ? 0.6 : 1 }}>
+        <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'} style={{ opacity: scrolledFirstThird ? 0.6 : 1 }}>
           <Link href="/" className="w-full h-full">
-            <div className="flex w-full items-center gap-4 m-4">
+            <div className="flex w-full items-center gap-4">
               <Logo />
-              {!scrolledPastHeader && <span>Bitmetro</span>}
+              <span
+                className={
+                  "inline-block transition-all duration-500 ease-in-out ml-2" +
+                  (scrolledPastHeader
+                    ? " max-w-0 opacity-0 text-[0px]"
+                    : " max-w-[120px] opacity-100 text-lg")
+                }
+                style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+              >
+                Bitmetro
+              </span>
             </div>
           </Link>
         </div>
 
-        <div className={menuItemClassName}>
+        <div className={menuItemClassName + ' flex items-center transition-all duration-500 ease-in-out'}>
           <button
             className="w-full"
             onClick={() => setMenuOpen(true)}
           >
-            <div className="flex justify-end items-center gap-4 m-4">
-              {!scrolledPastHeader && <span>Menu</span>}
+            <div className="flex justify-end items-center gap-4">
+              <span
+                className={
+                  "inline-block transition-all duration-500 ease-in-out mr-2" +
+                  (scrolledPastHeader
+                    ? " max-w-0 opacity-0 text-[0px]"
+                    : " max-w-[80px] opacity-100 text-lg")
+                }
+                style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+              >
+                Menu
+              </span>
               <HamburgerIcon />
             </div>
           </button>

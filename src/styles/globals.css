@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(120deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+}
 
 @keyframes scrollBackground {
   0% {
@@ -11,8 +18,37 @@
   }
 }
 
+
 .scrolling-background {
   @apply absolute top-0 left-0 w-full h-full bg-cover bg-repeat;
   animation: scrollBackground 25s linear infinite;
   filter: brightness(0.15);
+}
+
+.card-fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(.23,1,.32,1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accent-gradient {
+  background: linear-gradient(90deg, #06b6d4 0%, #6366f1 100%);
+  color: #fff;
+}
+
+.btn-premium {
+  @apply px-4 py-2 rounded-lg font-semibold shadow-md transition-all duration-150;
+  background: linear-gradient(90deg, #06b6d4 0%, #6366f1 100%);
+  color: #fff;
+  border: none;
 }
