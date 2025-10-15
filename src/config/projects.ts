@@ -4,6 +4,61 @@ export const projects: Project[] = [
   {
     cardStyle: 'col-span-1 sm:col-span-2',
     primaryTitle: true,
+    id: 'neuralsplit',
+    name: 'NeuralSplit',
+    subtitle: 'High performance, automated copy optimisation',
+    description: `
+      NeuralSplit is an API and SaaS that makes it easy to generate and optimise high-converting copy for your websites and apps.
+
+      Writing good copy is hard, and much research has gone into what makes people convert. It has to feel direct, urgent, emotional, and just plain simple.
+
+      NeuralSplit was created to make this easy. It will analyse your website to understand your business offer and target audience, and using that information,
+      you can create content elements (headlines, subheadlines, CTAs, etc) with multiple variants which are finely tuned to drive conversions.
+
+      Integrating them into your site is easy: one function call to grab a content variant, and one when a conversion happens.
+
+      NeuralSplit will use advanced *multi-armed bandit* algorithms to quickly optimise for the variants which convert best, giving you the best chance of earning your conversions.
+    `,
+    primaryImage: {
+      src: '/projects/neuralsplit/neuralsplit.png',
+      description: 'NeuralSplit Home',
+    },
+    images: [
+      {
+        src: '/projects/neuralsplit/ns-site.png',
+        description: "Create a website and automatically extract business offer and target audience",
+      },
+      {
+        src: '/projects/neuralsplit/ns-campaign.png',
+        description: "Create a new campaign",
+      },
+      {
+        src: '/projects/neuralsplit/ns-element.png',
+        description: "Create a headline (or other element). Uses direct response marketing principles to generate high-converting copy variants",
+      },
+      {
+        src: '/projects/neuralsplit/ns-candidates.png',
+        description: "The generated candidates, which can be perfected before they are saved",
+      },
+      {
+        src: '/projects/neuralsplit/ns-usage.png',
+        description: "Easily test and use elements in your site (NextJS example)",
+      },
+    ],
+    link: 'https://minervai.bitmetro.io',
+    techStack: [
+      'NestJS',
+      'NextJS',
+      'NodeJS',
+      'React',
+      'Typescript',
+      'PostgreSQL',
+      'GPT API',
+      'Vector Database',
+    ],
+  },
+  {
+    cardStyle: 'col-span-1 sm:col-span-1',
     id: 'minervai',
     name: 'Minervai',
     subtitle: 'E-commerce AI chatbot integrations made easy',
@@ -43,85 +98,6 @@ export const projects: Project[] = [
       'GPT API',
       'Vector Database',
     ],
-  },
-  {
-    cardStyle: 'row-span-1 lg:row-span-2',
-    id: 'charter',
-    name: 'Charter',
-    subtitle: 'A booking engine and CMS to bring value to the tourism sector',
-    description: `
-      Charter is a booking engine that came about to modernise the tourism industry in Corfu, Greece. Many great tourism-related
-      businesses didn't have an online presence, so we set out to make it easier for them to expand their offerings.
-      
-      Charter is a CMS and a booking engine that lets you manage the accounts of local operators, be they boat tours, car rentals, 
-      restaurants, or whatever you decide on.
-
-      Admins can define schemas for their service offerings which makes registering new services an easy and low-friction activity. Using schemas gives admins
-      control over various payment strategies, service fields and informational content, requests for user data upon booking, etc.
-
-      Operators can access the CMS as well. Charter offers restricted access to the operators to manage their own accounts and offerings independently
-      so they can have full control over their own services without having to go through the admins.
-
-      Charter is a headless CMS and offers an API that can be hooked into from the frontend. For Corfu we created [Corfu Travel Guide](https://www.corfutravelguide.net)
-      as a Charter frontend, though this is decoupled from the Charter CMS itself. Charter is not intended only for Corfu.
-
-      Using Charter in our first season we have helped dozens of local businesses enter the online space, and have consistently received positive feedback about it's intuitiveness and ease of use.
-      Customers have clearly found it easy and valuable too; in the first summer of launch we successfully processed over €10k in bookings.
-    `,
-    primaryImage: {
-      src: '/projects/charter/charter-large-white-bg.png',
-      description: 'Charter CMS and booking engine',
-    },
-    images: [
-      {
-        src: '/projects/charter/home.png',
-        description: 'Home screen of Charter',
-      },
-      {
-        src: '/projects/charter/operator.png',
-        description: 'A tourism operator and the services they provide',
-      },
-      {
-        src: '/projects/charter/schemas.png',
-        description: 'Creating a service schema. Here we choose what fields these services should show',
-      },
-      {
-        src: '/projects/charter/price-select.png',
-        description: 'Selecting the pricing strategy for this service type. Here we choose "Per age cohort"',
-      },
-      {
-        src: '/projects/charter/service-create.png',
-        description: 'Creating a service',
-      },
-      {
-        src: '/projects/charter/fields.png',
-        description: 'Setting the field values',
-      },
-      {
-        src: '/projects/charter/prices.png',
-        description: 'Setting the prices for each age cohort',
-      },
-      {
-        src: '/projects/charter/site-view.png',
-        description: 'How the service looks to the end user',
-      },
-      {
-        src: '/projects/charter/booking.png',
-        description: 'How the booking form looks to the end user',
-      },
-    ],
-    link: 'https://charter.bitmetro.io',
-    github: 'https://www.github.com/alastairzotos/charter',
-    techStack: [
-      'Typescript',
-      'React',
-      'NodeJS',
-      'NestJS',
-      'NextJS',
-      'MongoDB',
-      'MUI',
-      'Stripe',
-    ]
   },
   {
     id: 'pictobox',
@@ -252,6 +228,86 @@ export const projects: Project[] = [
     ]
   },
   {
+    cardStyle: 'row-span-1 lg:row-span-2',
+    id: 'charter',
+    name: 'Charter',
+    subtitle: 'A booking engine and CMS to bring value to the tourism sector',
+    description: `
+      Charter is a booking engine that came about to modernise the tourism industry in Corfu, Greece. Many great tourism-related
+      businesses didn't have an online presence, so we set out to make it easier for them to expand their offerings.
+      
+      Charter is a CMS and a booking engine that lets you manage the accounts of local operators, be they boat tours, car rentals, 
+      restaurants, or whatever you decide on.
+
+      Admins can define schemas for their service offerings which makes registering new services an easy and low-friction activity. Using schemas gives admins
+      control over various payment strategies, service fields and informational content, requests for user data upon booking, etc.
+
+      Operators can access the CMS as well. Charter offers restricted access to the operators to manage their own accounts and offerings independently
+      so they can have full control over their own services without having to go through the admins.
+
+      Charter is a headless CMS and offers an API that can be hooked into from the frontend. For Corfu we created [Corfu Travel Guide](https://www.corfutravelguide.net)
+      as a Charter frontend, though this is decoupled from the Charter CMS itself. Charter is not intended only for Corfu.
+
+      Using Charter in our first season we have helped dozens of local businesses enter the online space, and have consistently received positive feedback about it's intuitiveness and ease of use.
+      Customers have clearly found it easy and valuable too; in the first summer of launch we successfully processed over €10k in bookings.
+    `,
+    primaryImage: {
+      src: '/projects/charter/charter-large-white-bg.png',
+      description: 'Charter CMS and booking engine',
+    },
+    images: [
+      {
+        src: '/projects/charter/home.png',
+        description: 'Home screen of Charter',
+      },
+      {
+        src: '/projects/charter/operator.png',
+        description: 'A tourism operator and the services they provide',
+      },
+      {
+        src: '/projects/charter/schemas.png',
+        description: 'Creating a service schema. Here we choose what fields these services should show',
+      },
+      {
+        src: '/projects/charter/price-select.png',
+        description: 'Selecting the pricing strategy for this service type. Here we choose "Per age cohort"',
+      },
+      {
+        src: '/projects/charter/service-create.png',
+        description: 'Creating a service',
+      },
+      {
+        src: '/projects/charter/fields.png',
+        description: 'Setting the field values',
+      },
+      {
+        src: '/projects/charter/prices.png',
+        description: 'Setting the prices for each age cohort',
+      },
+      {
+        src: '/projects/charter/site-view.png',
+        description: 'How the service looks to the end user',
+      },
+      {
+        src: '/projects/charter/booking.png',
+        description: 'How the booking form looks to the end user',
+      },
+    ],
+    link: 'https://charter.bitmetro.io',
+    github: 'https://www.github.com/alastairzotos/charter',
+    techStack: [
+      'Typescript',
+      'React',
+      'NodeJS',
+      'NestJS',
+      'NextJS',
+      'MongoDB',
+      'MUI',
+      'Stripe',
+    ]
+  },
+  {
+    cardStyle: 'col-span-1 sm:col-span-2',
     id: 'phrase-gen',
     name: 'PhraseGen',
     subtitle: 'Advanced keyword multiplier for PPC targeting',
@@ -511,6 +567,7 @@ export const projects: Project[] = [
     ]
   },
   {
+    cardStyle: 'col-span-1 sm:col-span-2',
     id: 'react-page-editor',
     name: "React Page Editor",
     subtitle: "Intuitive Drag-and-Drop page editor for React",
