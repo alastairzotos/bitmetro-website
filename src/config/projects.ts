@@ -45,7 +45,7 @@ export const projects: Project[] = [
         description: "Easily test and use elements in your site (NextJS example)",
       },
     ],
-    link: 'https://minervai.bitmetro.io',
+    link: 'https://www.neuralsplit.com',
     techStack: [
       'NestJS',
       'NextJS',
@@ -57,49 +57,50 @@ export const projects: Project[] = [
       'Vector Database',
     ],
   },
-  {
-    cardStyle: 'col-span-1 sm:col-span-1',
-    id: 'minervai',
-    name: 'Minervai',
-    subtitle: 'E-commerce AI chatbot integrations made easy',
-    description: `
-      Minervai is a work-in-progress SaaS applications that allows owners of e-commerce shops to easily
-      integrate AI into their websites and apps to help customers make purchase decisions and upsells.
+  // {
+  //   cardStyle: 'col-span-1 sm:col-span-1',
+  //   id: 'minervai',
+  //   name: 'Minervai',
+  //   subtitle: 'E-commerce AI chatbot integrations made easy',
+  //   description: `
+  //     Minervai is a work-in-progress SaaS applications that allows owners of e-commerce shops to easily
+  //     integrate AI into their websites and apps to help customers make purchase decisions and upsells.
 
-      E-shop owners create an account on the app, upload their item collections (or integrate with the API for automatic synching)
-      and then embed some HTML or React code into their site to get the chatbox up and running.
-    `,
-    primaryImage: {
-      src: '/projects/minervai/collection.png',
-      description: 'Minervai AI integration',
-    },
-    images: [
-      {
-        src: '/projects/minervai/collection.png',
-        description: "An example collection of items that the AI can recommend to customers",
-      },
-      {
-        src: '/projects/minervai/embed.png',
-        description: "Embedding the chatbox is as easy as copying and pasting the code into your website",
-      },
-      {
-        src: '/projects/minervai/chatbox.png',
-        description: "How the chatbot looks by default",
-      },
-    ],
-    link: 'https://minervai.bitmetro.io',
-    techStack: [
-      'NestJS',
-      'NextJS',
-      'NodeJS',
-      'React',
-      'Typescript',
-      'PostgreSQL',
-      'GPT API',
-      'Vector Database',
-    ],
-  },
+  //     E-shop owners create an account on the app, upload their item collections (or integrate with the API for automatic synching)
+  //     and then embed some HTML or React code into their site to get the chatbox up and running.
+  //   `,
+  //   primaryImage: {
+  //     src: '/projects/minervai/collection.png',
+  //     description: 'Minervai AI integration',
+  //   },
+  //   images: [
+  //     {
+  //       src: '/projects/minervai/collection.png',
+  //       description: "An example collection of items that the AI can recommend to customers",
+  //     },
+  //     {
+  //       src: '/projects/minervai/embed.png',
+  //       description: "Embedding the chatbox is as easy as copying and pasting the code into your website",
+  //     },
+  //     {
+  //       src: '/projects/minervai/chatbox.png',
+  //       description: "How the chatbot looks by default",
+  //     },
+  //   ],
+  //   link: 'https://minervai.bitmetro.io',
+  //   techStack: [
+  //     'NestJS',
+  //     'NextJS',
+  //     'NodeJS',
+  //     'React',
+  //     'Typescript',
+  //     'PostgreSQL',
+  //     'GPT API',
+  //     'Vector Database',
+  //   ],
+  // },
   {
+    cardStyle: 'row-span-1 sm:row-span-2',
     id: 'pictobox',
     name: 'Pictobox',
     subtitle: 'A browser extension to save images to the cloud',
@@ -228,7 +229,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    cardStyle: 'row-span-1 lg:row-span-2',
+    // cardStyle: 'row-span-1 lg:row-span-2',
     id: 'charter',
     name: 'Charter',
     subtitle: 'A booking engine and CMS to bring value to the tourism sector',
@@ -307,7 +308,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    cardStyle: 'col-span-1 sm:col-span-2',
+    // cardStyle: 'col-span-1 sm:col-span-2',
     id: 'phrase-gen',
     name: 'PhraseGen',
     subtitle: 'Advanced keyword multiplier for PPC targeting',
@@ -567,7 +568,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    cardStyle: 'col-span-1 sm:col-span-2',
+    // cardStyle: 'col-span-1 sm:col-span-2',
     id: 'react-page-editor',
     name: "React Page Editor",
     subtitle: "Intuitive Drag-and-Drop page editor for React",

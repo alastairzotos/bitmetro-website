@@ -29,16 +29,19 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
           {
             title: 'View',
             url: project.link,
+            external: true,
           },
           project.github ? {
             title: 'GitHub',
             url: project.github,
             icon: <GithubIcon size={20} />,
+            external: true,
           } : undefined,
           project.chromeWebStore ? {
             title: 'Chrome Web Store',
             url: project.chromeWebStore,
             icon: <IconExternalLink />,
+            external: true,
           } : undefined,
         ].filter(l => l !== undefined) as HeaderLink[],
       }}
